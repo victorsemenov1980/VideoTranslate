@@ -12,7 +12,7 @@ from sqlalchemy import Column, Integer, JSON, String
 from youtube_api import pull_youtube_cuptions
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('postgresql://postgres:29941q2w3e4r@localhost:5433/cuptions')
+engine = create_engine('postgresql://<user>:<password>@localhost:5433/cuptions')
 
 Session = sessionmaker(bind=engine)
 Base = declarative_base()
@@ -36,11 +36,11 @@ class Movie_Caption(Base):
             return 0
     
     def retrieve_translated(youtube_movie_id):
-        return session.query(Movie_Caption).filter(Movie_Caption.movie_id==youtube_movie_id).one().transcript_translated
+        return session.query(Movie_Caption).filter(Movie_Caption.movie_id==youtube_movie_id).first().transcript_translated
             
     
     def delete_movie(youtube_movie_id):
-        movie=session.query(Movie_Caption).filter(Movie_Caption.movie_id==youtube_movie_id).one()
+        movie=session.query(Movie_Caption).filter(Movie_Caption.movie_id==youtube_movie_id).first()
         session.delete(movie)
         session.commit()
         return None

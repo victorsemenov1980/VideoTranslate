@@ -12,7 +12,7 @@ from sqlalchemy import Column, Integer, JSON, String
 
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('postgresql://postgres:29941q2w3e4r@localhost:5433/cuptions')
+engine = create_engine('postgresql://<user>:<password>@localhost:5433/cuptions')
 
 Session = sessionmaker(bind=engine)
 Base = declarative_base()

@@ -9,4 +9,4 @@ EXPOSE 8000
 
 ENTRYPOINT [ "python" ]
 
-CMD [ "post_request.py" ]
+CMD [ "post_request.py"]
