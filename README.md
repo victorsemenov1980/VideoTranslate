@@ -11,3 +11,5 @@
 
 Code is working with locally run PostgresSQL server, put in your credentials in
 both model.py files
+
+I feel like the code needs couple of more exceptions to be put in )
