@@ -10,7 +10,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api.formatters import JSONFormatter
 import json
 
-video_id='fhAw-IgoyMw'
+# video_id='fhAw-IgoyMw'
 # video_id='ZCdW4cWGqzg'
 
 def pull_youtube_cuptions(video_id):
